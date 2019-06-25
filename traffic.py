@@ -19,5 +19,17 @@ while(True):
 	lampu3 = r.json()["lampu3"]
 	lampu4 = r.json()["lampu4"]
 
+	if(lampu1 == "1"):
+		print("lampu1 merah")
+		print("lampu2 merah")
+		print("lampu3 merah")
+		print("lampu4 merah")
+	elif(lampu1 == "2"):
+		print("lampu1 kuning")
+	elif(lampu1 == "3"):
+		print("lampu1 ijo")
+	else:
+		print("merah")
+
 	time.sleep(0.5)
-	
+		
