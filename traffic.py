@@ -75,9 +75,6 @@ while(True):
 	# GPIO.output("P9_30",GPIO.LOW)
 	# GPIO.output("P9_27",GPIO.LOW)
 	# time.sleep(0.2)
-
-	for i in output_pins:
-		GPIO.output(i,GPIO.LOW)
 	if(lampu1 == "2"):
 		GPIO.output("P8_7",GPIO.LOW)
 		GPIO.output("P8_8",GPIO.HIGH)
