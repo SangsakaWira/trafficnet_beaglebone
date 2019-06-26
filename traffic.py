@@ -8,17 +8,32 @@ lampu2 = 0
 lampu3 = 0
 lampu4 = 0
 
-GPIO.setup("P8_7",GPIO.OUT)
+# Merah 1
+GPIO.setup("P8_7",GPIO.OUT) 
+# Kuning 1
 GPIO.setup("P8_8",GPIO.OUT)
+# Ijo 1
 GPIO.setup("P8_9",GPIO.OUT)
+
+# Merah 2
 GPIO.setup("P8_10",GPIO.OUT)
+# Kuning 2
 GPIO.setup("P8_11",GPIO.OUT)
+# Ijo 2
 GPIO.setup("P8_12",GPIO.OUT)
+
+# Merah 3
 GPIO.setup("P8_14",GPIO.OUT)
+# Kuning 3
 GPIO.setup("P8_16",GPIO.OUT)
+# Ijo 3
 GPIO.setup("P8_18",GPIO.OUT)
+
+# Merah 4
 GPIO.setup("P9_23",GPIO.OUT)
+# Kuning 4
 GPIO.setup("P9_30",GPIO.OUT)
+# Ijo 4
 GPIO.setup("P9_27",GPIO.OUT)
 
 while(True):
@@ -29,57 +44,69 @@ while(True):
 			lampu2 = r.json()["lampu2"]
 			lampu3 = r.json()["lampu3"]
 			lampu4 = r.json()["lampu4"]
+		print("Success")
 	except ConnectionError as e:
 		pass
+		print("Error")
 
 	GPIO.output("P8_7",GPIO.HIGH)
-	GPIO.output("P8_8",GPIO.HIGH)
-	GPIO.output("P8_9",GPIO.HIGH)
+	# GPIO.output("P8_8",GPIO.HIGH)
+	# GPIO.output("P8_9",GPIO.HIGH)
 	GPIO.output("P8_10",GPIO.HIGH)
-	GPIO.output("P8_11",GPIO.HIGH)
-	GPIO.output("P8_12",GPIO.HIGH)
+	# GPIO.output("P8_11",GPIO.HIGH)
+	# GPIO.output("P8_12",GPIO.HIGH)
 	GPIO.output("P8_14",GPIO.HIGH)
-	GPIO.output("P8_16",GPIO.HIGH)
-	GPIO.output("P8_18",GPIO.HIGH)
+	# GPIO.output("P8_16",GPIO.HIGH)
+	# GPIO.output("P8_18",GPIO.HIGH)
 	GPIO.output("P9_23",GPIO.HIGH)
-	GPIO.output("P9_30",GPIO.HIGH)
-	GPIO.output("P9_27",GPIO.HIGH)
-	time.sleep(0.2)
-	GPIO.output("P8_7",GPIO.LOW)
-	GPIO.output("P8_8",GPIO.LOW)
-	GPIO.output("P8_9",GPIO.LOW)
-	GPIO.output("P8_10",GPIO.LOW)
-	GPIO.output("P8_11",GPIO.LOW)
-	GPIO.output("P8_12",GPIO.LOW)
-	GPIO.output("P8_14",GPIO.LOW)
-	GPIO.output("P8_16",GPIO.LOW)
-	GPIO.output("P8_18",GPIO.LOW)
-	GPIO.output("P9_23",GPIO.LOW)
-	GPIO.output("P9_30",GPIO.LOW)
-	GPIO.output("P9_27",GPIO.LOW)
-	time.sleep(0.2)
-	# for i in output_pins:
-	# 	GPIO.output(i,GPIO.HIGH)
+	# GPIO.output("P9_30",GPIO.HIGH)
+	# GPIO.output("P9_27",GPIO.HIGH)
+	# time.sleep(0.2)
+	# GPIO.output("P8_7",GPIO.LOW)
+	# GPIO.output("P8_8",GPIO.LOW)
+	# GPIO.output("P8_9",GPIO.LOW)
+	# GPIO.output("P8_10",GPIO.LOW)
+	# GPIO.output("P8_11",GPIO.LOW)
+	# GPIO.output("P8_12",GPIO.LOW)
+	# GPIO.output("P8_14",GPIO.LOW)
+	# GPIO.output("P8_16",GPIO.LOW)
+	# GPIO.output("P8_18",GPIO.LOW)
+	# GPIO.output("P9_23",GPIO.LOW)
+	# GPIO.output("P9_30",GPIO.LOW)
+	# GPIO.output("P9_27",GPIO.LOW)
+	# time.sleep(0.2)
 
-	# for i in output_pins:
-	# 	GPIO.output(i,GPIO.LOW)
-	# if(lampu1 == "1"):
-	# 	GPIO.output(output_pins[0],GPIO.HIGH)
-	# 	GPIO.output(output_pins[1],GPIO.HIGH)
-	# 	GPIO.output(output_pins[2],GPIO.HIGH)
-	# 	GPIO.output(output_pins[3],GPIO.HIGH)
-	# elif(lampu1 == "2"):
-	# 	GPIO.output(output_pins[4],GPIO.HIGH)
-	# 	GPIO.output(output_pins[5],GPIO.HIGH)
-	# 	GPIO.output(output_pins[1],GPIO.HIGH)
-	# 	GPIO.output(output_pins[0],GPIO.HIGH)
-	# elif(lampu1 == "3"):
-	# 	GPIO.output(output_pins[0],GPIO.HIGH)
-	# 	GPIO.output(output_pins[0],GPIO.HIGH)
-	# 	GPIO.output(output_pins[0],GPIO.HIGH)
-	# 	GPIO.output(output_pins[0],GPIO.HIGH)
-	# else:
-	# 	print("merah")
-
-	time.sleep(0.5)
-		
+	for i in output_pins:
+		GPIO.output(i,GPIO.LOW)
+	if(lampu1 == "2"):
+		GPIO.output("P8_7",GPIO.LOW)
+		GPIO.output("P8_8",GPIO.HIGH)
+		GPIO.output("P8_9",GPIO.LOW)
+	elif(lampu1 == "3"):
+		GPIO.output("P8_7",GPIO.LOW)
+		GPIO.output("P8_8",GPIO.LOW)
+		GPIO.output("P8_9",GPIO.HIGH)
+	elif(lampu2 == "2"):
+		GPIO.output("P8_10",GPIO.LOW)
+		GPIO.output("P8_11",GPIO.HIGH)
+		GPIO.output("P8_12",GPIO.LOW)
+	elif(lampu2 == "3"):
+		GPIO.output("P8_10",GPIO.LOW)
+		GPIO.output("P8_11",GPIO.LOW)
+		GPIO.output("P8_12",GPIO.HIGH)
+	if(lampu3 == "2"):
+		GPIO.output("P8_14",GPIO.LOW)
+		GPIO.output("P8_16",GPIO.HIGH)
+		GPIO.output("P8_18",GPIO.LOW)
+	elif(lampu3 == "3"):
+		GPIO.output("P8_14",GPIO.LOW)
+		GPIO.output("P8_16",GPIO.LOW)
+		GPIO.output("P8_18",GPIO.HIGH)
+	elif(lampu4 == "2"):
+		GPIO.output("P9_23",GPIO.LOW)
+		GPIO.output("P9_30",GPIO.HIGH)
+		GPIO.output("P9_27",GPIO.LOW)
+	elif(lampu4 == "3"):
+		GPIO.output("P9_23",GPIO.LOW)
+		GPIO.output("P9_30",GPIO.LOW)
+		GPIO.output("P9_27",GPIO.HIGH)
