@@ -65,6 +65,10 @@ while(True):
 		GPIO.output("P8_7",GPIO.LOW)
 		GPIO.output("P8_8",GPIO.LOW)
 		GPIO.output("P8_9",GPIO.HIGH)
+	else:
+		GPIO.output("P8_7",GPIO.HIGH)
+		GPIO.output("P8_8",GPIO.LOW)
+		GPIO.output("P8_9",GPIO.LOW)
 
 	if(lampu2 == 1):
 		GPIO.output("P8_10",GPIO.HIGH)
@@ -78,6 +82,10 @@ while(True):
 		GPIO.output("P8_10",GPIO.LOW)
 		GPIO.output("P8_11",GPIO.LOW)
 		GPIO.output("P8_12",GPIO.HIGH)
+	else:
+		GPIO.output("P8_10",GPIO.HIGH)
+		GPIO.output("P8_11",GPIO.LOW)
+		GPIO.output("P8_12",GPIO.LOW)
 
 	if(lampu3 == 1):
 		GPIO.output("P8_14",GPIO.HIGH)
@@ -91,6 +99,10 @@ while(True):
 		GPIO.output("P8_14",GPIO.LOW)
 		GPIO.output("P8_16",GPIO.LOW)
 		GPIO.output("P8_18",GPIO.HIGH)
+	else:
+		GPIO.output("P8_14",GPIO.HIGH)
+		GPIO.output("P8_16",GPIO.LOW)
+		GPIO.output("P8_18",GPIO.LOW)
 
 	if(lampu4 == 1):
 		GPIO.output("P9_23",GPIO.HIGH)
@@ -104,3 +116,7 @@ while(True):
 		GPIO.output("P9_23",GPIO.LOW)
 		GPIO.output("P9_30",GPIO.LOW)
 		GPIO.output("P9_27",GPIO.HIGH)
+	else:
+		GPIO.output("P9_23",GPIO.HIGH)
+		GPIO.output("P9_30",GPIO.LOW)
+		GPIO.output("P9_27",GPIO.LOW)
