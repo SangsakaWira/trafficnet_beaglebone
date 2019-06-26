@@ -32,11 +32,11 @@ while(True):
 	GPIO.output("P8_7",GPIO.HIGH)
 	GPIO.output("P8_8",GPIO.HIGH)
 	GPIO.output("P8_9",GPIO.HIGH)
-	time.sleep(1)
+	time.sleep(0.2)
 	GPIO.output("P8_7",GPIO.LOW)
 	GPIO.output("P8_8",GPIO.LOW)
 	GPIO.output("P8_9",GPIO.LOW)
-	time.sleep(1)
+	time.sleep(0.2)
 	# for i in output_pins:
 	# 	GPIO.output(i,GPIO.HIGH)
 
