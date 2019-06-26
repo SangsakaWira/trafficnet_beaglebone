@@ -8,18 +8,18 @@ lampu2 = 0
 lampu3 = 0
 lampu4 = 0
 
-GPIO.setup(output_pins[0] ,GPIO.OUT)
-GPIO.setup(output_pins[1] ,GPIO.OUT)
-GPIO.setup(output_pins[2] ,GPIO.OUT)
-GPIO.setup(output_pins[3] ,GPIO.OUT)
-GPIO.setup(output_pins[4] ,GPIO.OUT)
-GPIO.setup(output_pins[5] ,GPIO.OUT)
-GPIO.setup(output_pins[6] ,GPIO.OUT)
-GPIO.setup(output_pins[7] ,GPIO.OUT)
-GPIO.setup(output_pins[8] ,GPIO.OUT)
-GPIO.setup(output_pins[9] ,GPIO.OUT)
-GPIO.setup(output_pins[10] ,GPIO.OUT)
-GPIO.setup(output_pins[11] ,GPIO.OUT)
+GPIO.setup("P8_7",GPIO.OUT)
+GPIO.setup("P8_8",GPIO.OUT)
+GPIO.setup("P8_9",GPIO.OUT)
+# GPIO.setup(output_pins[3] ,GPIO.OUT)
+# GPIO.setup(output_pins[4] ,GPIO.OUT)
+# GPIO.setup(output_pins[5] ,GPIO.OUT)
+# GPIO.setup(output_pins[6] ,GPIO.OUT)
+# GPIO.setup(output_pins[7] ,GPIO.OUT)
+# GPIO.setup(output_pins[8] ,GPIO.OUT)
+# GPIO.setup(output_pins[9] ,GPIO.OUT)
+# GPIO.setup(output_pins[10] ,GPIO.OUT)
+# GPIO.setup(output_pins[11] ,GPIO.OUT)
 
 while(True):
 	r = requests.get("http://trafficnet.id:7000/traffic/mulyosari")
