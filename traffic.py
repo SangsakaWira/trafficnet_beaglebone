@@ -39,11 +39,10 @@ GPIO.setup("P9_27",GPIO.OUT)
 while(True):
 	try:
 		r = requests.get("http://trafficnet.id:7000/traffic/mulyosari")
-		if(r == True):
-			lampu1 = r.json()["lampu1"]
-			lampu2 = r.json()["lampu2"]
-			lampu3 = r.json()["lampu3"]
-			lampu4 = r.json()["lampu4"]
+		lampu1 = r.json()["lampu1"]
+		lampu2 = r.json()["lampu2"]
+		lampu3 = r.json()["lampu3"]
+		lampu4 = r.json()["lampu4"]
 		print("Success")
 	except ConnectionError as e:
 		pass
