@@ -2,7 +2,7 @@ import requests
 import time
 import Adafruit_BBIO.GPIO as GPIO
 
-output_pins = ["P8_7","P8_8","P8_9","P8_10","P8_11","P8_12","P8_14","P8_16","GPIO_65","P9_49","P9_117","P9_115"]
+output_pins = ["P8_7","P8_8","P8_9","P8_10","P8_11","P8_12","P8_14","P8_16","P8_18","P9_49","P9_117","P9_115"]
 lampu1 = 0
 lampu2 = 0
 lampu3 = 0
@@ -14,15 +14,9 @@ GPIO.setup("P8_9",GPIO.OUT)
 GPIO.setup("P8_10",GPIO.OUT)
 GPIO.setup("P8_11",GPIO.OUT)
 GPIO.setup("P8_12",GPIO.OUT)
-# GPIO.setup(output_pins[3] ,GPIO.OUT)
-# GPIO.setup(output_pins[4] ,GPIO.OUT)
-# GPIO.setup(output_pins[5] ,GPIO.OUT)
-# GPIO.setup(output_pins[6] ,GPIO.OUT)
-# GPIO.setup(output_pins[7] ,GPIO.OUT)
-# GPIO.setup(output_pins[8] ,GPIO.OUT)
-# GPIO.setup(output_pins[9] ,GPIO.OUT)
-# GPIO.setup(output_pins[10] ,GPIO.OUT)
-# GPIO.setup(output_pins[11] ,GPIO.OUT)
+GPIO.setup("P8_14",GPIO.OUT)
+GPIO.setup("P8_16",GPIO.OUT)
+GPIO.setup("P8_18",GPIO.OUT)
 
 while(True):
 	r = requests.get("http://trafficnet.id:7000/traffic/mulyosari")
@@ -38,13 +32,19 @@ while(True):
 	GPIO.output("P8_10",GPIO.HIGH)
 	GPIO.output("P8_11",GPIO.HIGH)
 	GPIO.output("P8_12",GPIO.HIGH)
+	GPIO.output("P8_14",GPIO.HIGH)
+	GPIO.output("P8_16",GPIO.HIGH)
+	GPIO.output("P8_18",GPIO.HIGH)
 	time.sleep(0.2)
 	GPIO.output("P8_7",GPIO.LOW)
 	GPIO.output("P8_8",GPIO.LOW)
 	GPIO.output("P8_9",GPIO.LOW)
-	GPIO.output("P8_10",GPIO.HIGH)
-	GPIO.output("P8_11",GPIO.HIGH)
-	GPIO.output("P8_12",GPIO.HIGH)
+	GPIO.output("P8_10",GPIO.LOW)
+	GPIO.output("P8_11",GPIO.LOW)
+	GPIO.output("P8_12",GPIO.LOW)
+	GPIO.output("P8_14",GPIO.LOW)
+	GPIO.output("P8_16",GPIO.LOW)
+	GPIO.output("P8_18",GPIO.LOW)
 	time.sleep(0.2)
 	# for i in output_pins:
 	# 	GPIO.output(i,GPIO.HIGH)
