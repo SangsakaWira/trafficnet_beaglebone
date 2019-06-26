@@ -17,14 +17,17 @@ GPIO.setup("P8_12",GPIO.OUT)
 GPIO.setup("P8_14",GPIO.OUT)
 GPIO.setup("P8_16",GPIO.OUT)
 GPIO.setup("P8_18",GPIO.OUT)
+GPIO.setup("P9_49",GPIO.OUT)
+GPIO.setup("P9_117",GPIO.OUT)
+GPIO.setup("P9_115",GPIO.OUT)
 
 while(True):
 	r = requests.get("http://trafficnet.id:7000/traffic/mulyosari")
-	print(r.json())
-	lampu1 = r.json()["lampu1"]
-	lampu2 = r.json()["lampu2"]
-	lampu3 = r.json()["lampu3"]
-	lampu4 = r.json()["lampu4"]
+	if(r == True):
+		lampu1 = r.json()["lampu1"]
+		lampu2 = r.json()["lampu2"]
+		lampu3 = r.json()["lampu3"]
+		lampu4 = r.json()["lampu4"]
 
 	GPIO.output("P8_7",GPIO.HIGH)
 	GPIO.output("P8_8",GPIO.HIGH)
@@ -35,6 +38,9 @@ while(True):
 	GPIO.output("P8_14",GPIO.HIGH)
 	GPIO.output("P8_16",GPIO.HIGH)
 	GPIO.output("P8_18",GPIO.HIGH)
+	GPIO.output("P9_49",GPIO.HIGH)
+	GPIO.output("P9_117",GPIO.HIGH)
+	GPIO.output("P9_115",GPIO.HIGH)
 	time.sleep(0.2)
 	GPIO.output("P8_7",GPIO.LOW)
 	GPIO.output("P8_8",GPIO.LOW)
@@ -45,6 +51,9 @@ while(True):
 	GPIO.output("P8_14",GPIO.LOW)
 	GPIO.output("P8_16",GPIO.LOW)
 	GPIO.output("P8_18",GPIO.LOW)
+	GPIO.output("P9_49",GPIO.LOW)
+	GPIO.output("P9_117",GPIO.LOW)
+	GPIO.output("P9_115",GPIO.LOW)
 	time.sleep(0.2)
 	# for i in output_pins:
 	# 	GPIO.output(i,GPIO.HIGH)
