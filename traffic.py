@@ -53,44 +53,54 @@ while(True):
 	print("lampu3: "+str(lampu3))
 	print("lampu4: "+str(lampu4))
 
-	GPIO.output("P8_7",GPIO.HIGH)
-	GPIO.output("P8_10",GPIO.HIGH)
-	GPIO.output("P8_14",GPIO.HIGH)
-	GPIO.output("P9_23",GPIO.HIGH)
-
 	if(lampu1 == 1):
 		GPIO.output("P8_7",GPIO.HIGH)
 		GPIO.output("P8_8",GPIO.LOW)
 		GPIO.output("P8_9",GPIO.LOW)
-	if(lampu1 == 2):
+	elif(lampu1 == 2):
 		GPIO.output("P8_7",GPIO.LOW)
 		GPIO.output("P8_8",GPIO.HIGH)
 		GPIO.output("P8_9",GPIO.LOW)
-	if(lampu1 == 3):
+	elif(lampu1 == 3):
 		GPIO.output("P8_7",GPIO.LOW)
 		GPIO.output("P8_8",GPIO.LOW)
 		GPIO.output("P8_9",GPIO.HIGH)
-	if(lampu2 == 2):
+
+	if(lampu2 == 1):
+		GPIO.output("P8_10",GPIO.HIGH)
+		GPIO.output("P8_11",GPIO.LOW)
+		GPIO.output("P8_12",GPIO.LOW)
+	elif(lampu2 == 2):
 		GPIO.output("P8_10",GPIO.LOW)
 		GPIO.output("P8_11",GPIO.HIGH)
 		GPIO.output("P8_12",GPIO.LOW)
-	if(lampu2 == 3):
+	elif(lampu2 == 3):
 		GPIO.output("P8_10",GPIO.LOW)
 		GPIO.output("P8_11",GPIO.LOW)
 		GPIO.output("P8_12",GPIO.HIGH)
-	if(lampu3 == 2):
+
+	if(lampu3 == 1):
+		GPIO.output("P8_14",GPIO.HIGH)
+		GPIO.output("P8_16",GPIO.LOW)
+		GPIO.output("P8_18",GPIO.LOW)
+	elif(lampu3 == 2):
 		GPIO.output("P8_14",GPIO.LOW)
 		GPIO.output("P8_16",GPIO.HIGH)
 		GPIO.output("P8_18",GPIO.LOW)
-	if(lampu3 == 3):
+	elif(lampu3 == 3):
 		GPIO.output("P8_14",GPIO.LOW)
 		GPIO.output("P8_16",GPIO.LOW)
 		GPIO.output("P8_18",GPIO.HIGH)
-	if(lampu4 == 2):
+
+	if(lampu4 == 1):
+		GPIO.output("P9_23",GPIO.HIGH)
+		GPIO.output("P9_30",GPIO.LOW)
+		GPIO.output("P9_27",GPIO.LOW)
+	elif(lampu4 == 2):
 		GPIO.output("P9_23",GPIO.LOW)
 		GPIO.output("P9_30",GPIO.HIGH)
 		GPIO.output("P9_27",GPIO.LOW)
-	if(lampu4 == 3):
+	elif(lampu4 == 3):
 		GPIO.output("P9_23",GPIO.LOW)
 		GPIO.output("P9_30",GPIO.LOW)
 		GPIO.output("P9_27",GPIO.HIGH)
