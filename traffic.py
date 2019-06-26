@@ -20,14 +20,20 @@ while(True):
 	lampu4 = r.json()["lampu4"]
 
 	if(lampu1 == "1"):
-		print("lampu1 merah")
-		print("lampu2 merah")
-		print("lampu3 merah")
-		print("lampu4 merah")
+		GPIO.output(output_pins[0],GPIO.HIGH)
+		GPIO.output(output_pins[1],GPIO.HIGH)
+		GPIO.output(output_pins[2],GPIO.HIGH)
+		GPIO.output(output_pins[3],GPIO.HIGH)
 	elif(lampu1 == "2"):
-		print("lampu1 kuning")
+		GPIO.output(output_pins[4],GPIO.HIGH)
+		GPIO.output(output_pins[5],GPIO.HIGH)
+		GPIO.output(output_pins[1],GPIO.HIGH)
+		GPIO.output(output_pins[0],GPIO.HIGH)
 	elif(lampu1 == "3"):
-		print("lampu1 ijo")
+		GPIO.output(output_pins[0],GPIO.HIGH)
+		GPIO.output(output_pins[0],GPIO.HIGH)
+		GPIO.output(output_pins[0],GPIO.HIGH)
+		GPIO.output(output_pins[0],GPIO.HIGH)
 	else:
 		print("merah")
 
