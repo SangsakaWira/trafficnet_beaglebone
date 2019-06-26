@@ -50,44 +50,27 @@ while(True):
 		print("Error")
 
 	GPIO.output("P8_7",GPIO.HIGH)
-	# GPIO.output("P8_8",GPIO.HIGH)
-	# GPIO.output("P8_9",GPIO.HIGH)
 	GPIO.output("P8_10",GPIO.HIGH)
-	# GPIO.output("P8_11",GPIO.HIGH)
-	# GPIO.output("P8_12",GPIO.HIGH)
 	GPIO.output("P8_14",GPIO.HIGH)
-	# GPIO.output("P8_16",GPIO.HIGH)
-	# GPIO.output("P8_18",GPIO.HIGH)
 	GPIO.output("P9_23",GPIO.HIGH)
-	# GPIO.output("P9_30",GPIO.HIGH)
-	# GPIO.output("P9_27",GPIO.HIGH)
-	# time.sleep(0.2)
-	# GPIO.output("P8_7",GPIO.LOW)
-	# GPIO.output("P8_8",GPIO.LOW)
-	# GPIO.output("P8_9",GPIO.LOW)
-	# GPIO.output("P8_10",GPIO.LOW)
-	# GPIO.output("P8_11",GPIO.LOW)
-	# GPIO.output("P8_12",GPIO.LOW)
-	# GPIO.output("P8_14",GPIO.LOW)
-	# GPIO.output("P8_16",GPIO.LOW)
-	# GPIO.output("P8_18",GPIO.LOW)
-	# GPIO.output("P9_23",GPIO.LOW)
-	# GPIO.output("P9_30",GPIO.LOW)
-	# GPIO.output("P9_27",GPIO.LOW)
-	# time.sleep(0.2)
+
+	if(lampu1 == "1"):
+		GPIO.output("P8_7",GPIO.HIGH)
+		GPIO.output("P8_8",GPIO.LOW)
+		GPIO.output("P8_9",GPIO.LOW)
 	if(lampu1 == "2"):
 		GPIO.output("P8_7",GPIO.LOW)
 		GPIO.output("P8_8",GPIO.HIGH)
 		GPIO.output("P8_9",GPIO.LOW)
-	elif(lampu1 == "3"):
+	if(lampu1 == "3"):
 		GPIO.output("P8_7",GPIO.LOW)
 		GPIO.output("P8_8",GPIO.LOW)
 		GPIO.output("P8_9",GPIO.HIGH)
-	elif(lampu2 == "2"):
+	if(lampu2 == "2"):
 		GPIO.output("P8_10",GPIO.LOW)
 		GPIO.output("P8_11",GPIO.HIGH)
 		GPIO.output("P8_12",GPIO.LOW)
-	elif(lampu2 == "3"):
+	if(lampu2 == "3"):
 		GPIO.output("P8_10",GPIO.LOW)
 		GPIO.output("P8_11",GPIO.LOW)
 		GPIO.output("P8_12",GPIO.HIGH)
@@ -95,15 +78,15 @@ while(True):
 		GPIO.output("P8_14",GPIO.LOW)
 		GPIO.output("P8_16",GPIO.HIGH)
 		GPIO.output("P8_18",GPIO.LOW)
-	elif(lampu3 == "3"):
+	if(lampu3 == "3"):
 		GPIO.output("P8_14",GPIO.LOW)
 		GPIO.output("P8_16",GPIO.LOW)
 		GPIO.output("P8_18",GPIO.HIGH)
-	elif(lampu4 == "2"):
+	if(lampu4 == "2"):
 		GPIO.output("P9_23",GPIO.LOW)
 		GPIO.output("P9_30",GPIO.HIGH)
 		GPIO.output("P9_27",GPIO.LOW)
-	elif(lampu4 == "3"):
+	if(lampu4 == "3"):
 		GPIO.output("P9_23",GPIO.LOW)
 		GPIO.output("P9_30",GPIO.LOW)
 		GPIO.output("P9_27",GPIO.HIGH)
