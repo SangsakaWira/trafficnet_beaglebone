@@ -2,7 +2,7 @@ import requests
 import time
 import Adafruit_BBIO.GPIO as GPIO
 
-output_pins = ["P8_7","P8_8","P8_9","P8_10","P8_11","P8_12","P8_14","P8_16","P8_18","P9_49","P9_117","P9_115"]
+output_pins = ["P8_7","P8_8","P8_9","P8_10","P8_11","P8_12","P8_14","P8_16","GPIO_65","P9_49","P9_117","P9_115"]
 lampu1 = 0
 lampu2 = 0
 lampu3 = 0
