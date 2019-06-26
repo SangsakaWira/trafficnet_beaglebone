@@ -49,6 +49,11 @@ while(True):
 		pass
 		print("Error")
 
+	print("lampu1: "+lampu1)
+	print("lampu2: "+lampu2)
+	print("lampu3: "+lampu3)
+	print("lampu4: "+lampu4)
+
 	GPIO.output("P8_7",GPIO.HIGH)
 	GPIO.output("P8_10",GPIO.HIGH)
 	GPIO.output("P8_14",GPIO.HIGH)
