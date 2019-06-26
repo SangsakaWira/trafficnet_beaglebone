@@ -29,6 +29,14 @@ while(True):
 	lampu3 = r.json()["lampu3"]
 	lampu4 = r.json()["lampu4"]
 
+	GPIO.output("P8_7",GPIO.HIGH)
+	GPIO.output("P8_8",GPIO.HIGH)
+	GPIO.output("P8_9",GPIO.HIGH)
+	time.sleep(1)
+	GPIO.output("P8_7",GPIO.LOW)
+	GPIO.output("P8_8",GPIO.LOW)
+	GPIO.output("P8_9",GPIO.LOW)
+	time.sleep(1)
 	# for i in output_pins:
 	# 	GPIO.output(i,GPIO.HIGH)
 
