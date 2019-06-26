@@ -18,16 +18,18 @@ GPIO.setup("P8_14",GPIO.OUT)
 GPIO.setup("P8_16",GPIO.OUT)
 GPIO.setup("P8_18",GPIO.OUT)
 GPIO.setup("P9_23",GPIO.OUT)
-GPIO.setup("P9_25",GPIO.OUT)
+GPIO.setup("P9_30",GPIO.OUT)
 GPIO.setup("P9_27",GPIO.OUT)
 
 while(True):
-	r = requests.get("http://trafficnet.id:7000/traffic/mulyosari")
-	if(r == True):
+	try:
+		r = requests.get("http://trafficnet.id:7000/traffic/mulyosari")
 		lampu1 = r.json()["lampu1"]
 		lampu2 = r.json()["lampu2"]
 		lampu3 = r.json()["lampu3"]
 		lampu4 = r.json()["lampu4"]
+	except ConnectionError as e:
+		pass
 
 	GPIO.output("P8_7",GPIO.HIGH)
 	GPIO.output("P8_8",GPIO.HIGH)
@@ -39,7 +41,7 @@ while(True):
 	GPIO.output("P8_16",GPIO.HIGH)
 	GPIO.output("P8_18",GPIO.HIGH)
 	GPIO.output("P9_23",GPIO.HIGH)
-	GPIO.output("P9_25",GPIO.HIGH)
+	GPIO.output("P9_30",GPIO.HIGH)
 	GPIO.output("P9_27",GPIO.HIGH)
 	time.sleep(0.2)
 	GPIO.output("P8_7",GPIO.LOW)
@@ -52,7 +54,7 @@ while(True):
 	GPIO.output("P8_16",GPIO.LOW)
 	GPIO.output("P8_18",GPIO.LOW)
 	GPIO.output("P9_23",GPIO.LOW)
-	GPIO.output("P9_25",GPIO.LOW)
+	GPIO.output("P9_30",GPIO.LOW)
 	GPIO.output("P9_27",GPIO.LOW)
 	time.sleep(0.2)
 	# for i in output_pins:
