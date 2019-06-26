@@ -29,11 +29,11 @@ while(True):
 	lampu3 = r.json()["lampu3"]
 	lampu4 = r.json()["lampu4"]
 
-	for i in output_pins:
-		GPIO.output(i,GPIO.HIGH)
+	# for i in output_pins:
+	# 	GPIO.output(i,GPIO.HIGH)
 
-	for i in output_pins:
-		GPIO.output(i,GPIO.LOW)
+	# for i in output_pins:
+	# 	GPIO.output(i,GPIO.LOW)
 	# if(lampu1 == "1"):
 	# 	GPIO.output(output_pins[0],GPIO.HIGH)
 	# 	GPIO.output(output_pins[1],GPIO.HIGH)
