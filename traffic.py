@@ -1,6 +1,7 @@
 import requests
 import time
 import Adafruit_BBIO.GPIO as GPIO
+
 lampu1 = 0
 lampu2 = 0
 lampu3 = 0
